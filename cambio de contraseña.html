@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recuperación de Contraseña</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="assets/css/contras.css" />
 </head>
 <body>
 
-  <header>
+  <div class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ..." >
+ <header>
     <h1 class="title" id="h1">Recuperación de usuario</h1>
   </header>
 
@@ -26,10 +28,14 @@
         <label for="confirm-password">Confirmar contraseña</label>
         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required />
 
-        <input type="submit" value="Actualizar contraseña" />
+        <div class="flex items-stretch ...">
+          <input type="submit" value="Actualizar contraseña" />
         <a href="/registro.html">
           <input type="button" value="Registro" />
         </a>
+        </div>
+
+        
       </form>
     </section>
 
@@ -39,7 +45,6 @@
       <form action="#" id="form-dar-de-baja">
         <label for="cedula">Cédula</label>
         <input type="text" id="cedula" name="cedula" placeholder="********" required />
-
         <label for="fecha-expedicion">Fecha de expedición de la cédula</label>
         <input type="date" id="fecha-expedicion" name="fecha-expedicion" required />
 
@@ -52,6 +57,8 @@
       </form>
     </section>
   </main>
+  </div>
+ 
 
   <footer id="footer">
     &copy; 2025 Derechos Reservados - Sistema de Becas

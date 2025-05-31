@@ -1,0 +1,19 @@
+
+/* Responsive */
+@media (max-width: 480px) {
+  main {
+    padding: 0 15px;
+  }
+
+  input[type="submit"],
+  input[type="button"],
+  button {
+    width: 100%;
+    min-width: unset;
+  }
+
+  a input[type="button"] {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
