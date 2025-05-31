@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Sistema de Notas</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/assets/css/Dash.css" />
+</head>
+<body>
+
+  <div class="dashboard-container">
+    
+  
+  
+    <aside class="sidebar">
+      <h2>MENU</h2>
+      <nav>
+        <ul>
+          <li><a href="Login.html">Login</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="cambio de contraseña.html">Cambio de contraseña</a></li>
+          <li><a href="AdmonMain.html">Administrador</a></li>
+          <li><a href="TeacherAssignment.html">Perfil profesores</a></li>
+          <li><a href="TeacherStudentGroup.html">Grupos de estudiante</a></li>
+          <li><a href="StudentNotes.2.html">Perfil estudiantes</a></li>
+          <li><a href="Cierresesion.html">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    
+    
+    <div class="main-content">
+
+
+      <header class="main-header">
+        <h1>Sistema de Notas CESDE</h1>
+        <p>Gestión académica eficiente</p>
+      </header>
+
+      
+      <section class="filters">
+        <label for="periodo">Periodo:</label>
+        <select id="periodo">
+          <option value="2025-1">2025-1</option>
+          <option value="2025-2">2025-2</option>
+        </select>
+
+        <label for="grupo">Grupo:</label>
+        <select id="grupo">
+          <option value="G1">G1</option>
+          <option value="G2">G2</option>
+        </select>
+      </section>
+
+      
+      <section class="summary">
+        <div class="summary-card">
+          <h2>35</h2>
+          <p>Estudiantes</p>
+        </div>
+        <div class="summary-card">
+          <h2>4.2</h2>
+          <p>Promedio General</p>
+        </div>
+        <div class="summary-card">
+          <h2>7</h2>
+          <p>Inasistencias</p>
+        </div>
+      </section>
+
+      
+      <section class="student-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Identificación</th>
+              <th>Momento 1</th>
+              <th>Momento 2</th>
+              <th>Momento 3</th>
+              <th>Final</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Juan Pérez</td>
+              <td>123456789</td>
+              <td>4.5</td>
+              <td>4.8</td>
+              <td>5.0</td>
+              <td>4.8</td>
+              <td><button>Editar</button></td>
+            </tr>
+            <tr>
+                <td>Camilo Mendoza</td>
+                <td>1234654329</td>
+                <td>3.5</td>
+                <td>4.8</td>
+                <td>5.0</td>
+                <td>4.4</td>
+                <td><button>Editar</button></td>
+              </tr>
+              <tr>
+                <td>Juan Pérez</td>
+                <td>123456789</td>
+                <td>3.0</td>
+                <td>4.5</td>
+                <td>5.7</td>
+                <td>4.0</td>
+                <td><button>Editar</button></td>
+              </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="quick-actions">
+        <button>Agregar Estudiante</button>
+        <button>Exportar Reporte</button>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Proyecto CESDE - Sistema de Notas
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+.form {
+    display: block;
+}
+  form {
+    border: 3px solid hsl(0, 0%, 100%);
+  }
+
+
+
+
+/* Contenedor de los inputs */
+.allInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+/* Etiquetas */
+.allInputs label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Inputs */
+.allInputs input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Estilo de inputs al enfocarlos */
+.allInputs input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+
+
+
+
+
+    .button {
+      background-color: #3456b4;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      width: 130px;
+      border-radius: 8px;
+      font-weight: 600;
+      height: 30px;
+      font-size: 12px;
+      border: none;
+  }
+
+  .button:hover {
+ background-color: rgba(70, 64, 64, 0.217);
+ color: black;
+  }
+  .container {
+    padding: 24px;
+}
+.container {
+    display: block;
+    container: 8px;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: 8px;
+    position-anchor: 8px;
+    position: 8px;
+    container-type: 8px;
+    container: 8px;
+    
+}
+footer {
+  
+}
+
+

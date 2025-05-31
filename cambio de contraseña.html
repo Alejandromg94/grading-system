@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recuperación de Contraseña</title>
+  <link rel="stylesheet" href="assets/css/contras.css" />
+</head>
+<body>
+
+  <header>
+    <h1 class="title" id="h1">Recuperación de usuario</h1>
+  </header>
+
+  <main>
+    <!-- Sección para actualizar contraseña -->
+    <section>
+      <h2>Actualizar contraseña</h2>
+      <form action="#" id="form-cambiar-contraseña">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="notas@.com" required />
+
+        <label for="new-password">Nueva contraseña</label>
+        <input type="password" id="new-password" name="new-password" placeholder="Nueva contraseña" required />
+
+        <label for="confirm-password">Confirmar contraseña</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required />
+
+        <input type="submit" value="Actualizar contraseña" />
+        <a href="/registro.html">
+          <input type="button" value="Registro" />
+        </a>
+      </form>
+    </section>
+
+    <!-- Sección para dar de baja a un usuario -->
+    <section>
+      <h2>Dar de baja a usuario</h2>
+      <form action="#" id="form-dar-de-baja">
+        <label for="cedula">Cédula</label>
+        <input type="text" id="cedula" name="cedula" placeholder="********" required />
+
+        <label for="fecha-expedicion">Fecha de expedición de la cédula</label>
+        <input type="date" id="fecha-expedicion" name="fecha-expedicion" required />
+
+        <label for="carta-autorizacion">Adjuntar carta de autorización</label>
+        <input type="file" id="carta-autorizacion" name="carta-autorizacion" required />
+
+        <a href="Descargar carta modelo.pdf" download>Descargar carta modelo.pdf</a>
+
+        <button type="submit">Dar de baja</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="footer">
+    &copy; 2025 Derechos Reservados - Sistema de Becas
+  </footer>
+
+</body>
+</html>

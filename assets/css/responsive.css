@@ -1,0 +1,65 @@
+/*  RESPONSIVE DISEÑO */
+@media (max-width: 768px) {
+
+    .table th,
+    .table td {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta a {
+        padding: 0.6rem 1rem;
+    }
+
+    input[type="button"] {
+        padding: 0.6rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta a {
+        padding: 0.6rem 1rem;
+    }
+
+    input[type="button"] {
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .table th,
+    .table td {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    #formulario {
+        padding: 20px;
+    }
+}

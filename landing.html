@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Notas Estudiantiles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <img src="/" class=""    alt="Imagen Estudiante" >
+
+    <div class="hero"></div>
+    <h1>Consulta Tus Notas Estudiantiles</h1>
+    <p>La manera más fácil y rápida de acceder a tus notas académicas.</p>
+    <a href="#formulario" class="cta-button">Comenzar Consulta</a>
+  </div>
+
+  <div class="form-section" id="formulario">
+    <h2>Validación Académica</h2>
+    <form>
+      <label for="id">ID del Estudiante:</label>
+      <input type="text" id="id" name="id" placeholder="Ej. 20250123" required>
+
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+
+      <label for="materia">Materia:</label>
+      <input type="text" id="materia" name="materia" placeholder="Ej. Matemáticas" required>
+
+      <label for="nota">Nota:</label>
+      <input type="number" id="nota" name="nota" placeholder="Ej. 85" min="0" max="100" required>
+
+      <input type="submit" value="Consultar Nota">
+    </form>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sistema de Validación Académica. Todos los derechos reservados.
+  </div>
+
+</body>
+</html>
