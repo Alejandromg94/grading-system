@@ -1,10 +1,10 @@
 
 /* Estilos generales y centrado */
 body {
-    margin: 0;
-    padding: 0;
+  background: linear-gradient(indigo 500 purple 500 pink 500 );
+    margin: 10;
+    padding: 10;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6fa;
     color: #333;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@ body {
   
   /* Contenedor principal */
   main section {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
