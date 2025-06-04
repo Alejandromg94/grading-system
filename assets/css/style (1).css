@@ -12,12 +12,7 @@ body {
 }
 
 header,
-footer {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
+
 
 main {
   padding: 20px;

@@ -151,14 +151,7 @@
     transform: translateY(-3px);
   }
   
-  /* PIE DE PÁGINA */
-  footer { 
-    background-color: #3456b4;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
+ 
   
   /*  BOTONES GENERALES */
   input[type="button"] {

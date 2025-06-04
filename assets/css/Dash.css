@@ -157,14 +157,4 @@
     gap: 15px;
   }
   
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #3456b4;
-    color: white;
-    font-size: 14px;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-  }
+ 
