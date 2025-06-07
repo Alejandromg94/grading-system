@@ -1,241 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Main</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="assets/css/Style.css">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admon Main</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1 class="title" id="h1">ADMON MAIN</h1>
-    </header>
-    <nav></nav>
-    <main>
-        <section>
-            <div class="image" id="Logo">
-                <figure>
-                    <img src="/assets/Images/logo perfil.jpg" alt="">
-                </figure>
-            </div>  
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-800 text-white text-center py-6">
+    <h1 class="text-3xl font-bold">ADMON MAIN</h1>
+  </header>
 
-            <h3>Nombre completo</h3>
-            <h3>Numero de celular</h3>
-            <h3>Cedula</h3>
-            
-        </section>
-        <section>
-            <h2>
-                BASES DE DATOS GENERAL
-            </h2>
-            <table class="table">
-                <tr>
-                    <th>Nombre Completo</th>
-                    <th>Cedula</th>
-                    <th>Numero de contacto</th>
-                    <th>Correo Electronico</th>
-                    <th>Programa Matriculado</th>
-                    <th>Area de conocimoiento</th>
-                    <th>Rol asignado</th>
-                    <th>Estado del rol</th>
-            </tr>
+  <main class="p-6 space-y-8">
+    <section class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
+      <div class="w-32 h-32 mb-4">
+        <img src="/assets/Images/logo perfil.jpg" alt="Logo perfil" class="w-full h-full object-cover rounded-full" />
+      </div>
+      <h3 class="text-lg font-semibold">Nombre completo</h3>
+      <h3 class="text-lg font-semibold">Número de celular</h3>
+      <h3 class="text-lg font-semibold">Cédula</h3>
+    </section>
+
+    <section class="bg-white rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold mb-4 text-center">BASES DE DATOS GENERAL</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-300 text-sm">
+          <thead class="bg-blue-100">
             <tr>
-                <th>
-                    <input type="texto" placeholder="Deimer Dario Lara Rangel">
-                </th>
-                <th>
-                    <input type="number" placeholder="1092987263">
-                </th>
-                <th>
-                    <input type="number" placeholder="3001000000">
-                </th>
-                <th>
-                    <input type="email" placeholder="Example@gmail.com">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Asistente de software">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Bases de datos">
-                </th>
-                <th>
-                    
-                    <select id="opciones" name="opciones">
-                        <option value="opcion1">Profesor</option>
-                        <option value="opcion3">Estudiante</option>
-                </th>
-                <th>
-                    <button>Activo</button>
-                    <button>Inactivo</button>
-                </th>
-
+              <th class="px-4 py-2 border">Nombre Completo</th>
+              <th class="px-4 py-2 border">Cédula</th>
+              <th class="px-4 py-2 border">Número de contacto</th>
+              <th class="px-4 py-2 border">Correo Electrónico</th>
+              <th class="px-4 py-2 border">Programa Matriculado</th>
+              <th class="px-4 py-2 border">Área de conocimiento</th>
+              <th class="px-4 py-2 border">Rol asignado</th>
+              <th class="px-4 py-2 border">Estado del rol</th>
             </tr>
-            <tr>
-                <th>
-                    <input type="texto" placeholder="Deimer Dario Lara Rangel">
-                </th>
-                <th>
-                    <input type="number" placeholder="1092987263">
-                </th>
-                <th>
-                    <input type="number" placeholder="3001000000">
-                </th>
-                <th>
-                    <input type="email" placeholder="Example@gmail.com">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Asistente de software">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Bases de datos">
-                </th>
-                <th>
-                    <select id="opciones" name="opciones">
-                        <option value="opcion1">Profesor</option>
-                        <option value="opcion3">Estudiante</option>
-                   
-                </th>
-                <th>
-                    <button>Activo</button>
-                    <button>Inactivo</button>
-                </th>
-
+          </thead>
+          <tbody>
+            <!-- Puedes duplicar esta fila para más datos -->
+            <tr class="bg-white hover:bg-gray-100">
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
+              <td class="px-4 py-2 border">
+                
+                   <a
+              href="TeacherAssignment.html"
+              class="bg-red-500 hover:bg-red-500 text-white text-center font-semibold py-2 px-4 rounded transition"
+            >
+              Profesor
+            </a>
+                  
+                </select>
+              </td>
+              <td class="px-4 py-2 border text-center space-x-1">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
+              </td>
             </tr>
-            <tr>
-                <th>
-                    <input type="texto" placeholder="Deimer Dario Lara Rangel">
-                </th>
-                <th>
-                    <input type="number" placeholder="1092987263">
-                </th>
-                <th>
-                    <input type="number" placeholder="3001000000">
-                </th>
-                <th>
-                    <input type="email" placeholder="Example@gmail.com">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Asistente de software">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Bases de datos">
-                </th>
-                <th>
-                    <select id="opciones" name="opciones">
-                        <option value="opcion1">Profesor</option>
-                        <option value="opcion3">Estudiante</option>
-                    
-                </th>
-                <th>
-                    <button>Activo</button>
-                    <button>Inactivo</button>
-                </th>
-
+            <tr class="bg-white hover:bg-gray-100">
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
+              <td class="px-4 py-2 border">
+                  <a
+              href="StudentNotes.2.html"
+              class="bg-yellow-500 hover:bg-yellow-500 text-white text-center font-semibold py-2 px-4 rounded transition"
+            >
+              Estudiante
+            </a>
+                </select>
+              </td>
+              <td class="px-4 py-2 border text-center space-x-1">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
+              </td>
             </tr>
-            <tr>
-                <th>
-                    <input type="texto" placeholder="Deimer Dario Lara Rangel">
-                </th>
-                <th>
-                    <input type="number" placeholder="1092987263">
-                </th>
-                <th>
-                    <input type="number" placeholder="3001000000">
-                </th>
-                <th>
-                    <input type="email" placeholder="Example@gmail.com">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Asistente de software">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Bases de datos">
-                </th>
-                <th>
-                    <select id="opciones" name="opciones">
-                        <option value="opcion1">Profesor</option>
-                        <option value="opcion3">Estudiante</option>
-                </th>
-                <th>
-                    <button>Activo</button>
-                    <button>Inactivo</button>
-                </th>
-
+            <tr class="bg-white hover:bg-gray-100">
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
+              <td class="px-4 py-2 border">
+                <select class="w-full px-2 py-1 border rounded">
+                  <option>Profesor</option>
+                  <option>Estudiante</option>
+                </select>
+              </td>
+              <td class="px-4 py-2 border text-center space-x-1">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
+              </td>
             </tr>
-            <tr>
-                <th>
-                    <input type="texto" placeholder="Deimer Dario Lara Rangel">
-                </th>
-                <th>
-                    <input type="number" placeholder="1092987263">
-                </th>
-                <th>
-                    <input type="number" placeholder="3001000000">
-                </th>
-                <th>
-                    <input type="email" placeholder="Example@gmail.com">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Asistente de software">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Bases de datos">
-                </th>
-                <th>
-                    <select id="opciones" name="opciones">
-                        <option value="opcion1">Profesor</option>
-                        <option value="opcion3">Estudiante</option>
-                    
-                </th>
-                <th>
-                    <button>Activo</button>
-                    <button>Inactivo</button>
-                </th>
-
+            <tr class="bg-white hover:bg-gray-100">
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
+              <td class="px-4 py-2 border">
+                <select class="w-full px-2 py-1 border rounded">
+                  <option>Profesor</option>
+                  <option>Estudiante</option>
+                </select>
+              </td>
+              <td class="px-4 py-2 border text-center space-x-1">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
+              </td>
             </tr>
-            <tr>
-                <th>
-                    <input type="texto" placeholder="Deimer Dario Lara Rangel">
-                </th>
-                <th>
-                    <input type="number" placeholder="1092987263">
-                </th>
-                <th>
-                    <input type="number" placeholder="3001000000">
-                </th>
-                <th>
-                    <input type="email" placeholder="Example@gmail.com">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Asistente de software">
-                </th>
-                <th>
-                    <input type="texto" placeholder="Bases de datos">
-                </th>
-                <th>
-                    
-                    <select id="opciones" name="opciones">
-                        <option value="opcion1">Profesor</option>
-                        <option value="opcion3">Estudiante</option>
-                </th>
-                <th>
-                    <button>Activo</button>
-                    <button>Inactivo</button>
-                </th>
-
+            <tr class="bg-white hover:bg-gray-100">
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
+              <td class="px-4 py-2 border">
+                <select class="w-full px-2 py-1 border rounded">
+                  <option>Profesor</option>
+                  <option>Estudiante</option>
+                </select>
+              </td>
+              <td class="px-4 py-2 border text-center space-x-1">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
+              </td>
             </tr>
-            </table>
+            <!-- Fin de fila ejemplo -->
+          </tbody>
+        </table>
+      </div>
 
-                <input type="button" value="Cerrar sesion">
-                </a>
-        </section>
-    </main>
-    <aside>    
-    </aside>
-     <footer class="w-full bg-blue-700 text-white text-center py-4">
-      &copy; 2025 Proyecto CESDE - Sistema de Notas
-    </footer>
+      <div class="mt-6 text-center">
+        <input type="button" value="Cerrar sesión" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 cursor-pointer" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-blue-700 text-white text-center py-4 mt-10">
+    &copy; 2025 Proyecto CESDE - Sistema de Notas
+  </footer>
 </body>
 </html>
