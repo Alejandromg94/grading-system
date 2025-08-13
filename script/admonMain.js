@@ -14,7 +14,6 @@ function formulario() {
   };
 
   console.log("Formulario completado:");
-  //console.log(datos);
   return datos;
 }
 
