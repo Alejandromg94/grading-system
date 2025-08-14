@@ -24,7 +24,7 @@ function cerrarSesion() {
   window.location.href = "login.html"; // Redirige a login
 }
 
-function mostrarMenu() {
+function mostrarMenuTeaAssi() {
   let opcion = prompt("Menú Principal:\n1. Ver Grupo\n2. Eliminar Grupo\n3. Cerrar sesión");
 
   switch (opcion) {
@@ -44,7 +44,7 @@ function mostrarMenu() {
       alert(resultadoEliminar);
       console.log(resultadoEliminar);
       if (confirm("¿Deseas regresar al menú principal?")) {
-        mostrarMenu(); 
+        mostrarMenuTeaAssi(); 
       }
       break;
 
@@ -55,9 +55,9 @@ function mostrarMenu() {
     default:
       alert("Opción no válida. Por favor, selecciona una opción válida.");
       console.log("Opción no válida.");
-      mostrarMenu(); 
+      mostrarMenuTeaAssi(); 
       break;
   }
 }
 
-mostrarMenu();
+mostrarMenuTeaAssi(); 
