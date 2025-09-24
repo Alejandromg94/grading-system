@@ -1,5 +1,0 @@
-Entregables proyecto Integrador
-1 - Implemntar funciones
-2 - Aplciar ciclos
-3 - Aplicar condicionales
-TODO simulado en JavaScript sin conexión a base de datos o html
