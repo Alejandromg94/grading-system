@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Sistema de Notas</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Se corrige un error de sintaxis y se define una clase para el color del texto si es necesario */
+      .text-white-300 {
+        color: #d1d5db; /* color gray-300 de Tailwind */
+      }
+    </style>
   </head>
   <body class="bg-gray-100 min-h-screen flex flex-col">
     <div class="flex flex-1">
-      <!-- Sidebar -->
       <aside
         class="w-64 bg-blue-800 text-white p-6 border border-white rounded-2xl hidden md:flex flex-col justify-between"
       >
-        <!-- Imagen del Menú -->
         <div class="flex justify-center mb-6">
           <img
             src="/grading-system/Images/banner.png"
@@ -21,7 +25,6 @@
           />
         </div>
 
-        <!-- Opciones del menú con íconos -->
         <nav class="flex-1 flex flex-col justify-between">
           <ul
             class="flex-1 flex flex-col justify-evenly text-lg font-semibold space-y-2"
@@ -32,11 +35,13 @@
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
-              <form action id="form-login" class="form-login">  <path
+                <path
                   d="M10 2a6 6 0 00-6 6v1H3a1 1 0 000 2h1v4a2 2 0 002 2h8a2 2 0 002-2v-4h1a1 1 0 100-2h-1V8a6 6 0 00-6-6z"
                 />
               </svg>
-              <a href="/public/pages/Login.html" class="hover:text-yellow-300">Login</a>
+              <a href="/public/pages/Login.html" class="hover:text-yellow-300"
+                >Login</a
+              >
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -44,13 +49,13 @@
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
-                <path</form>
-              
+                <path
                   d="M2 10a8 8 0 1116 0A8 8 0 012 10zm8 4a1 1 0 100-2 1 1 0 000 2zM9 9V5a1 1 0 112 0v4a1 1 0 01-2 0z"
                 />
               </svg>
-              <form action id="form-record" class="form-record">
-                <a href="/public/pages/record.html" class="hover:text-yellow-300">Registro</a>
+              <a href="/public/pages/record.html" class="hover:text-yellow-300"
+                >Registro</a
+              >
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -58,13 +63,13 @@
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
-                <path/form>
+                <path
                   d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 6a1 1 0 011-1h4a1 1 0 011 1v6H4a1 1 0 01-1-1v-5zm6 0h7a1 1 0 011 1v5a1 1 0 01-1 1h-7v-6z"
-
-              
                 />
               </svg>
-              <a href="/public/pages/changePassword.html" class="hover:text-yellow-300"
+              <a
+                href="/public/pages/changePassword.html"
+                class="hover:text-yellow-300"
                 >Cambio de contraseña</a
               >
             </li>
@@ -78,7 +83,9 @@
                   d="M10 3a1 1 0 011 1v1h6a1 1 0 011 1v1h-8v2h8v1a1 1 0 01-1 1h-6v1a1 1 0 01-2 0V4a1 1 0 011-1z"
                 />
               </svg>
-              <a href="/public/pages/admonMain.html" class="hover:text-yellow-300"
+              <a
+                href="/public/pages/admonMain.html"
+                class="hover:text-yellow-300"
                 >Administrador</a
               >
             </li>
@@ -92,7 +99,9 @@
                   d="M10 2a6 6 0 00-6 6v2H3a1 1 0 000 2h1v4h12v-4h1a1 1 0 100-2h-1V8a6 6 0 00-6-6z"
                 />
               </svg>
-              <a href="/public/pages/teacherAssignment.html" class="hover:text-yellow-300"
+              <a
+                href="/public/pages/teacherAssignment.html"
+                class="hover:text-yellow-300"
                 >Perfil profesores</a
               >
             </li>
@@ -122,7 +131,9 @@
                   d="M11 2a1 1 0 00-1 1v1H5a1 1 0 00-1 1v10h12V5a1 1 0 00-1-1h-5V3a1 1 0 00-1-1z"
                 />
               </svg>
-              <a href="/public/pages/studentNotes.html" class="hover:text-yellow-300"
+              <a
+                href="/public/pages/studentNotes.html"
+                class="hover:text-yellow-300"
                 >Perfil estudiantes</a
               >
             </li>
@@ -144,9 +155,7 @@
         </nav>
       </aside>
 
-      <!-- Main content -->
       <div class="flex-1 p-6">
-        <!-- Header -->
         <header class="text-center mb-8">
           <h1 class="text-3xl font-bold text-blue-700">
             Sistema de Notas CESDE
@@ -154,7 +163,6 @@
           <p class="text-gray-700">Gestión académica eficiente</p>
         </header>
 
-        <!-- Filtros -->
         <section
           class="bg-white p-4 rounded-lg shadow mb-6 flex flex-wrap gap-4"
         >
@@ -174,7 +182,6 @@
           </div>
         </section>
 
-        <!-- Resumen -->
         <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           <div class="bg-white rounded-lg shadow p-4 text-center">
             <h2 class="text-2xl font-bold text-blue-700">35</h2>
@@ -190,7 +197,6 @@
           </div>
         </section>
 
-        <!-- Tabla de estudiantes -->
         <section class="overflow-x-auto mb-6">
           <table
             class="min-w-full bg-white shadow text-sm rounded-xl overflow-hidden"
@@ -256,8 +262,14 @@
           </table>
         </section>
 
-        <!-- Acciones rápidas -->
         <section class="flex flex-wrap gap-4">
+          <a
+            href="/public/pages/matricula.html"
+            class="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 font-semibold transition shadow-md"
+          >
+            Completar Matrícula Ahora
+          </a>
+
           <button
             class="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700"
           >
@@ -274,7 +286,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer class="w-full bg-blue-800 text-white text-center py-6 mt-8">
       &copy; 2025 Proyecto CESDE - Sistema de Notas
     </footer>
