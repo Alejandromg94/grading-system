@@ -3,7 +3,7 @@
 // Simulación de una base de datos de usuarios (Array de Objetos)
 
 const USERS = [
-    { username: 'admin', password: '12345', role: 'admin', redirect: '/public/pages/admonMain.html' },
+    { username: 'amind', password: '12345', role: 'admin', redirect: '/public/pages/admonMain.html' },
     { username: 'profesor', password: 'qwert', role: 'teacher', redirect: '/public/pages/teacherAssignment.html' },
     { username: 'estudiante', password: 'zxc123', role: 'student', redirect: '/public/pages/studentNotes.html' }
     // Puedes añadir más usuarios aquí
