@@ -14,7 +14,7 @@
   <main class="p-6 space-y-8">
     <section class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
       <div class="w-32 h-32 mb-4">
-        <img src="/assets/Images/logo perfil.jpg" alt="Logo perfil" class="w-full h-full object-cover rounded-full" />
+        <img src="/public/imagenes/logo perfil.jpg" alt="Logo perfil" class="w-full h-full object-cover rounded-full" />
       </div>
       <h3 class="text-lg font-semibold">Nombre completo</h3>
       <h3 class="text-lg font-semibold">Número de celular</h3>
@@ -49,7 +49,7 @@
               <td class="px-4 py-2 border">
                 
                    <a
-              href="teacherassignment.html"
+              href="/public/pages/teacherAssignment.html"
               class="bg-red-500 hover:bg-red-500 text-white text-center font-semibold py-2 px-4 rounded transition"
             >
               Profesor
@@ -71,7 +71,7 @@
               <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
               <td class="px-4 py-2 border">
                   <a
-              href="studentnotes.html"
+              href="/public/pages/studentAssignment.html"
               class="bg-yellow-500 hover:bg-yellow-500 text-white text-center font-semibold py-2 px-4 rounded transition"
             >
               Estudiante
@@ -91,7 +91,27 @@
               <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
               <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
               <td class="px-4 py-2 border">
+                <select class="w-full px-4 py-1 border rounded">
+                  <option>administrador</option>
+                   <option>Profesor</option>
+                  <option>Estudiante</option>
+                </select>
+              </td>
+              <td class="px-4 py-2 border text-center space-x-1">
+                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
+                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
+              </td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-100">
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
+              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
+              <td class="px-4 py-2 border">
                 <select class="w-full px-2 py-1 border rounded">
+                  <option>administrador</option>
                   <option>Profesor</option>
                   <option>Estudiante</option>
                 </select>
@@ -110,24 +130,7 @@
               <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
               <td class="px-4 py-2 border">
                 <select class="w-full px-2 py-1 border rounded">
-                  <option>Profesor</option>
-                  <option>Estudiante</option>
-                </select>
-              </td>
-              <td class="px-4 py-2 border text-center space-x-1">
-                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
-                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
-              </td>
-            </tr>
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
-              <td class="px-4 py-2 border">
-                <select class="w-full px-2 py-1 border rounded">
+                  <option>administrador</option>
                   <option>Profesor</option>
                   <option>Estudiante</option>
                 </select>
@@ -143,7 +146,7 @@
       </div>
 
       <div class="mt-6 text-center">
-        <a href="logout.html"><input a type="button" value="Cerrar sesión" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 cursor-pointer" />
+        <a href="/public/pages/logout.html"><input a type="button" value="Cerrar sesión" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 cursor-pointer" />
       </div>
     </section>
   </main>
