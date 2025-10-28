@@ -1,4 +1,4 @@
-import { Usuarios } from "/models/UsuarioModel.js";
+import { Usuarios } from "../models/UsuarioModel.js";
 import {
   gurdarLocalStorage,
   consultarLocalStorage,
