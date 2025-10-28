@@ -12,13 +12,3 @@ export const expresiones = {
   // Dirección: Mínimo 5 caracteres.
   direccion: /^[a-zA-Z0-9#,\.\s-]{5,}$/,
 };
-
-// export let expresiones = {
-//     texto: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos. De 3 a 40 caracteres.
-//     documento: /^\d{7,14}$/, // 7 a 14 numeros.
-//     telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-//     direccion: /^[a-zA-Z0-9\s\#\-\.\,]{5,100}$/, // Letras, numeros, espacios y algunos caracteres especiales.
-//     contrasena: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, // Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.
-//     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Correo.
-
-// };
