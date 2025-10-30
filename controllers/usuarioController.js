@@ -46,7 +46,7 @@ if (formulariologin) {
       });
 
       setTimeout(() => {
-        window.location.href = "/index.html";
+        window.location.href = "/views/pages/Dashboard.html";
       }, 2000);
     } else {
       Swal.fire({
