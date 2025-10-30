@@ -4,7 +4,6 @@ import {
   consultarLocalStorage,
 } from "../helpers/localstorage.js";
 
-// Registrar usuario (formulario de registro)
 export function registrarUsuario() {
   let formulario = document.getElementById("matricula-form");
   if (!formulario) return;
@@ -18,11 +17,10 @@ export function registrarUsuario() {
     guardarLocalStorage("usuarios", Usuarios);
 
     console.log("Usuarios registrados:", Usuarios);
-    window.location.href = "/views/pages/Login.html";
+    window.location.href = "/index.html";
   });
 }
 
-// Login de usuario
 let formulariologin = document.getElementById("formulariologin");
 if (formulariologin) {
   formulariologin.addEventListener("submit", (e) => {
