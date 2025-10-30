@@ -40,14 +40,28 @@ if (formulariologin) {
       guardarLocalStorage("usuario", usuarioEncontrado);
 
       Swal.fire({
-        title: "¡Bienvenido!",
-        text: "Has iniciado sesión correctamente.",
-        icon: "success",
+        title: "¡Inicio de sesión exitoso!",
+        html: `
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+        <svg width="100" height="100" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="50" stroke="#4CAF50" stroke-width="5" fill="none" opacity="0.3"/>
+          <path d="M40 65 L55 80 L85 45" stroke="#4CAF50" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <animate attributeName="stroke-dasharray" from="0,100" to="100,0" dur="0.8s" fill="freeze" />
+          </path>
+        </svg>
+        <p style="font-size:16px; color:#444;">Cargando a dashboard...</p>
+      </div>
+    `,
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        background: "#ffffff",
+        timer: 3000,
+        timerProgressBar: true,
       });
 
       setTimeout(() => {
         window.location.href = "/views/pages/Dashboard.html";
-      }, 2000);
+      }, 3000);
     } else {
       Swal.fire({
         title: "Error",
@@ -55,7 +69,5 @@ if (formulariologin) {
         icon: "error",
       });
     }
-
-    console.log("Resultado de login:", usuarioEncontrado);
   });
 }
