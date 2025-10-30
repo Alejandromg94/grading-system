@@ -1,54 +1,61 @@
 import { Usuarios } from "../models/UsuarioModel.js";
 import {
-  gurdarLocalStorage,
+  guardarLocalStorage,
   consultarLocalStorage,
-} from "/helpers/localstorage.js";
+} from "../helpers/localstorage.js";
 
+// Registrar usuario (formulario de registro)
 export function registrarUsuario() {
-  let formulario = document.getElementById("formulario");
+  let formulario = document.getElementById("matricula-form");
+  if (!formulario) return;
+
   formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(formulario);
     let usuario = Object.fromEntries(formData);
+
     Usuarios.push(usuario);
-    gurdarLocalStorage("usuarios", Usuarios);
-    console.log(Usuarios);
-    window.location.href = "/views/login.html";
+    guardarLocalStorage("usuarios", Usuarios);
+
+    console.log("Usuarios registrados:", Usuarios);
+    window.location.href = "/views/pages/Login.html";
   });
 }
 
+// Login de usuario
 let formulariologin = document.getElementById("formulariologin");
 if (formulariologin) {
   formulariologin.addEventListener("submit", (e) => {
     e.preventDefault();
     let formData = new FormData(formulariologin);
     let usuario = Object.fromEntries(formData);
-    let Usuarios = consultarLocalStorage("usuarios");
-    let autc = Usuarios.some(
-      (index) =>
-        index.correo == usuario.correo && index.contrasena == usuario.contrasena
+
+    let usuarios = consultarLocalStorage("usuarios") || [];
+
+    let usuarioEncontrado = usuarios.find(
+      (u) => u.correo === usuario.correo && u.contrasena === usuario.contrasena
     );
 
-    if (autc) {
-      gurdarLocalStorage("usuario", autc);
+    if (usuarioEncontrado) {
+      guardarLocalStorage("usuario", usuarioEncontrado);
+
       Swal.fire({
         title: "¡Bienvenido!",
         text: "Has iniciado sesión correctamente.",
-        icon: "Bienvenido",
+        icon: "success",
       });
-      // se puede colocar una animacion de carga aqui
+
       setTimeout(() => {
-        window.location.href = "/views/panel.html";
-      }, 4000);
-      // window.location.href = "/views/panel.html";
+        window.location.href = "/index.html";
+      }, 2000);
     } else {
       Swal.fire({
-        title: "Error!",
-        text: "usuario o contraseña incorrecta",
+        title: "Error",
+        text: "Usuario o contraseña incorrectos.",
         icon: "error",
       });
     }
 
-    console.log(autc);
+    console.log("Resultado de login:", usuarioEncontrado);
   });
 }

@@ -1,15 +1,16 @@
-import { consultarLocalStorage } from "/helpers/localstorage.js";
+import { consultarLocalStorage } from "../helpers/localstorage.js";
 
-export let Usuarios = consultarLocalStorage("Usuarios") || [
+export const Usuarios = JSON.parse(localStorage.getItem("usuarios")) || [
+  // let Usuarios = consultarLocalStorage("Usuarios") || [
   {
     nombre: "Jaime",
     apellido: "Zapata",
     documento: "12352345",
     correo: "jaime@example.com",
-    telefono: "3246720301",
+    dirreccion: "avenida37a#44-45",
     contrasena: "Contrase12*",
-    genero: "masculino",
-    hobbies: "musica",
+    programa: "Asistente en Contaduría",
+    hobbies: "acetar terminos",
   },
   {
     nombre: "Ana",
