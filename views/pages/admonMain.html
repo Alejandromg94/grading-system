@@ -1,159 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admon Main</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-blue-800 text-white text-center py-6">
-    <h1 class="text-3xl font-bold">ADMON MAIN</h1>
-  </header>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admon Main</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-  <main class="p-6 space-y-8">
-    <section class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
-      <div class="w-32 h-32 mb-4">
-        <img src="/views/imagenes/logo perfil.jpg" alt="Logo perfil" class="w-full h-full object-cover rounded-full" />
-      </div>
-      <h3 class="text-lg font-semibold">Nombre completo</h3>
-      <h3 class="text-lg font-semibold">Número de celular</h3>
-      <h3 class="text-lg font-semibold">Cédula</h3>
-    </section>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-800 text-white text-center py-6">
+      <h1 class="text-3xl font-bold">ADMON MAIN</h1>
+    </header>
 
-    <section class="bg-white rounded-lg shadow-md p-6">
-      <h2 class="text-2xl font-bold mb-4 text-center">BASES DE DATOS GENERAL</h2>
-      <div class="overflow-x-auto">
-        <table class="min-w-full border border-gray-300 text-sm">
-          <thead class="bg-blue-100">
-            <tr>
-              <th class="px-4 py-2 border">Nombre Completo</th>
-              <th class="px-4 py-2 border">Cédula</th>
-              <th class="px-4 py-2 border">Número de contacto</th>
-              <th class="px-4 py-2 border">Correo Electrónico</th>
-              <th class="px-4 py-2 border">Programa Matriculado</th>
-              <th class="px-4 py-2 border">Área de conocimiento</th>
-              <th class="px-4 py-2 border">Rol asignado</th>
-              <th class="px-4 py-2 border">Estado del rol</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Puedes duplicar esta fila para más datos -->
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
-              <td class="px-4 py-2 border">
-                
-                   <a
-              href="/public/pages/teacherAssignment.html"
-              class="bg-red-500 hover:bg-red-500 text-white text-center font-semibold py-2 px-4 rounded transition"
-            >
-              Profesor
-            </a>
-                  
-                </select>
-              </td>
-              <td class="px-4 py-2 border text-center space-x-1">
-                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
-                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
-              </td>
-            </tr>
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
-              <td class="px-4 py-2 border">
-                  <a
-              href="/public/pages/studentAssignment.html"
-              class="bg-yellow-500 hover:bg-yellow-500 text-white text-center font-semibold py-2 px-4 rounded transition"
-            >
-              Estudiante
-            </a>
-                </select>
-              </td>
-              <td class="px-4 py-2 border text-center space-x-1">
-                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
-                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
-              </td>
-            </tr>
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
-              <td class="px-4 py-2 border">
-                <select class="w-full px-4 py-1 border rounded">
-                  <option>administrador</option>
-                   <option>Profesor</option>
-                  <option>Estudiante</option>
-                </select>
-              </td>
-              <td class="px-4 py-2 border text-center space-x-1">
-                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
-                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
-              </td>
-            </tr>
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
-              <td class="px-4 py-2 border">
-                <select class="w-full px-2 py-1 border rounded">
-                  <option>administrador</option>
-                  <option>Profesor</option>
-                  <option>Estudiante</option>
-                </select>
-              </td>
-              <td class="px-4 py-2 border text-center space-x-1">
-                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
-                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
-              </td>
-            </tr>
-            <tr class="bg-white hover:bg-gray-100">
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Deimer Dario Lara Rangel"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="1092987263"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="number" placeholder="3001000000"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="email" placeholder="Example@gmail.com"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Asistente de software"></td>
-              <td class="px-4 py-2 border"><input class="w-full px-2 py-1 border rounded" type="text" placeholder="Bases de datos"></td>
-              <td class="px-4 py-2 border">
-                <select class="w-full px-2 py-1 border rounded">
-                  <option>administrador</option>
-                  <option>Profesor</option>
-                  <option>Estudiante</option>
-                </select>
-              </td>
-              <td class="px-4 py-2 border text-center space-x-1">
-                <button class="bg-green-500 text-white px-2 py-1 rounded">Activo</button>
-                <button class="bg-red-500 text-white px-2 py-1 rounded">Inactivo</button>
-              </td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
+    <main class="p-6 space-y-8">
+      <!-- PERFIL DEL USUARIO -->
+      <section
+        id="perfil-usuario"
+        class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center space-y-2"
+      >
+        <div class="w-32 h-32 mb-4">
+          <img
+            id="imagen-perfil"
+            src="/views/imagenes/logo perfil.jpg"
+            alt="Logo perfil"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <h3 id="nombre-usuario" class="text-lg font-semibold">
+          Nombre completo
+        </h3>
+        <h3 id="telefono-usuario" class="text-lg font-semibold">
+          Número de celular
+        </h3>
+        <h3 id="cedula-usuario" class="text-lg font-semibold">Cédula</h3>
+      </section>
 
-      <div class="mt-6 text-center">
-        <a href="/public/pages/logout.html"><input a type="button" value="Cerrar sesión" class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 cursor-pointer" />
-      </div>
-    </section>
-  </main>
+      <!-- TABLA DE USUARIOS -->
+      <section class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-bold mb-4 text-center">
+          BASE DE DATOS GENERAL
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="table-auto w-full border border-gray-300 mt-5">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="px-4 py-2 border">Nombre</th>
+                <th class="px-4 py-2 border">Teléfono</th>
+                <th class="px-4 py-2 border">Cédula</th>
+                <th class="px-4 py-2 border">Rol</th>
+                <th class="px-4 py-2 border">Estado</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-usuarios"></tbody>
+          </table>
+        </div>
 
-  <footer class="w-full bg-blue-700 text-white text-center py-4 mt-10">
-    &copy; 2025 Proyecto CESDE - Sistema de Notas
-  </footer>
-  <script src="script/admonMain.js"></script>
-</body>
+        <div class="mt-6 text-center">
+          <button
+            id="btn-cerrar-sesion"
+            class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800 transition"
+          >
+            Cerrar sesión
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full bg-blue-700 text-white text-center py-4 mt-10">
+      &copy; 2025 Proyecto CESDE - Sistema de Notas
+    </footer>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Script principal -->
+    <script type="module" src="../app-js/admonMain.js"></script>
+  </body>
 </html>

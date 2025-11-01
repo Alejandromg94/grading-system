@@ -1,197 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Teacher Assignment</title>
-</head>
-<body class="min-h-screen flex flex-col bg-gray-50">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asignación Docente</title>
 
-  <!-- HEADER -->
-  <header class="bg-blue-700 text-white py-6 shadow-md">
-    <h1 class="text-3xl font-bold text-center">ASIGNACIÓN DOCENTE</h1>
-  </header>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-  <!-- MAIN CONTENT -->
-  <main class="flex-grow p-6 max-w-7xl mx-auto">
-    <!-- Perfil -->
-    <section class="mb-8 bg-white p-6 rounded shadow-md">
-      <div class="flex items-center gap-6">
-        <figure class="w-24 h-24 rounded-full overflow-hidden">
-          <img src="/views/imagenes/logo perfil.jpg" alt="Perfil" class="w-full h-full object-cover" />
+  <body class="min-h-screen flex flex-col bg-gray-50 text-gray-800 font-sans">
+    <!-- HEADER -->
+    <header class="bg-blue-700 text-white py-6 shadow-md">
+      <h1 class="text-3xl font-bold text-center">ASIGNACIÓN DOCENTE</h1>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow p-6 max-w-7xl mx-auto w-full">
+      <!-- PERFIL DEL PROFESOR -->
+      <section
+        class="mb-8 bg-white p-6 rounded-xl shadow-md flex items-center gap-6"
+      >
+        <figure class="w-24 h-24 rounded-full overflow-hidden border shadow">
+          <img
+            src="/views/imagenes/logo perfil.jpg"
+            alt="Perfil"
+            id="imagen-perfil"
+            class="w-full h-full object-cover"
+          />
         </figure>
         <div>
-          <h3 class="text-lg font-semibold">Nombre completo</h3>
-          <h3 class="text-gray-600">Número de celular</h3>
-          <h3 class="text-gray-600">Cédula</h3>
+          <h3 class="text-lg font-semibold" id="nombre-profesor">
+            Nombre completo: ---
+          </h3>
+          <h3 class="text-gray-600" id="telefono-profesor">
+            Número de celular: ---
+          </h3>
+          <h3 class="text-gray-600" id="cedula-profesor">Cédula: ---</h3>
         </div>
+      </section>
+
+      <!-- TABLA DE ASIGNACIONES -->
+      <section class="bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-bold mb-4 text-blue-700">
+          Información de las asignaturas
+        </h2>
+
+        <div class="overflow-x-auto">
+          <table
+            id="tabla-asignaciones"
+            class="min-w-full border text-sm text-left text-gray-700"
+          >
+            <thead class="bg-blue-100 text-blue-900 uppercase">
+              <tr>
+                <th class="px-4 py-2 border">Sede</th>
+                <th class="px-4 py-2 border">Submódulo</th>
+                <th class="px-4 py-2 border">Grupo</th>
+                <th class="px-4 py-2 border">Periodo Académico</th>
+                <th class="px-4 py-2 border">Horario</th>
+                <th class="px-4 py-2 border">Aula</th>
+                <th class="px-4 py-2 border">Nota</th>
+                <th class="px-4 py-2 border text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-cuerpo"></tbody>
+            <!-- 👈 corregido -->
+          </table>
+        </div>
+
+        <!-- BOTÓN PARA AÑADIR NUEVA FILA -->
+        <div class="flex justify-end mt-4">
+          <button
+            id="btn-agregar"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg shadow transition"
+          >
+            ➕ Agregar Asignatura
+          </button>
+        </div>
+      </section>
+
+      <!-- BOTÓN DE CERRAR SESIÓN -->
+      <div class="mt-8 flex justify-center">
+        <button
+          id="btn-cerrar-sesion"
+          class="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded-lg shadow transition"
+        >
+          Cerrar sesión
+        </button>
       </div>
-    </section>
+    </main>
 
-    <!-- Asignaturas -->
-    <section class="bg-white p-6 rounded shadow-md">
-      <h2 class="text-xl font-bold mb-4 text-blue-700">Información de las asignaturas</h2>
+    <!-- FOOTER -->
+    <footer class="bg-blue-700 text-white text-center py-4">
+      &copy; 2025 Proyecto CESDE - Sistema de Notas
+    </footer>
 
-      <div class="overflow-x-auto">
-        <table class="min-w-full border text-sm text-left text-gray-700">
-          <thead class="bg-blue-100 text-blue-900">
-            <tr>
-              <th class="px-4 py-2 border">Sede</th>
-              <th class="px-4 py-2 border">Submódulo</th>
-              <th class="px-4 py-2 border">Grupo</th>
-              <th class="px-4 py-2 border">Periodo Académico</th>
-              <th class="px-4 py-2 border">Horario</th>
-              <th class="px-4 py-2 border">Aula</th>
-              <th class="px-4 py-2 border">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Fila de ejemplo, puedes duplicar según necesidad -->
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Bello" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="number" placeholder="1092987263" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Diurno" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="1-2025" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Lunes de 7:00am a 9:00am" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="5-102" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border flex gap-2 justify-center">
-                <h2>
-  <a href="teacherGroupassignment.html" 
-     class="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-center">
-    Ver grupo
-  </a>
-</h2>
-                <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">Eliminar</button>
-              </td>
-            </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Bello" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="number" placeholder="1092987263" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Diurno" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="1-2025" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Lunes de 7:00am a 9:00am" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="5-102" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border flex gap-2 justify-center">
-                <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">Ver grupo</button>
-                <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">Eliminar</button>
-              </td>
-            </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Bello" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="number" placeholder="1092987263" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Diurno" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="1-2025" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Lunes de 7:00am a 9:00am" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="5-102" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border flex gap-2 justify-center">
-                <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">Ver grupo</button>
-                <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">Eliminar</button>
-              </td>
-            </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Bello" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="number" placeholder="1092987263" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Diurno" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="1-2025" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Lunes de 7:00am a 9:00am" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="5-102" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border flex gap-2 justify-center">
-                <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">Ver grupo</button>
-                <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">Eliminar</button>
-              </td>
-            </tr>
-            <tr class="hover:bg-gray-50">
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Bello" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="number" placeholder="1092987263" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Diurno" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="1-2025" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="Lunes de 7:00am a 9:00am" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border">
-                <input type="text" placeholder="5-102" class="w-full border rounded px-2 py-1" />
-              </td>
-              <td class="px-4 py-2 border flex gap-2 justify-center">
-                <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">Ver grupo</button>
-                <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition">Eliminar</button>
-              </td>
-            </tr>
-            <!-- Repite esta fila para más asignaciones -->
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Botón de Cerrar Sesión -->
-    <div class="mt-8 flex justify-center">
-      <a href="logout.html" <button class="bg-blue-700 text-white px-6 py-2 rounded hover:bg-gray-900 transition">
-  Cerrar sesión
-</button></a>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-blue-700 text-white text-center py-4">
-    &copy; 2025 Proyecto CESDE - Sistema de Notas
-  </footer>
-<script src="script/teacherAssignment.js"></script>
-</body>
+    <!-- JS -->
+    <script type="module" src="../app-js/teacherAssignment.js" defer></script>
+  </body>
 </html>
-

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MIS NOTAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-100 text-gray-800 font-sans">
-
     <!-- Header -->
     <header class="bg-blue-700 text-white py-4 text-center shadow">
       <h1 class="text-3xl font-bold">MIS NOTAS</h1>
@@ -18,58 +18,61 @@
       <!-- Datos del estudiante -->
       <section class="mb-8">
         <div class="flex items-center space-x-6 mb-4">
-          <img src="/views/imagenes/logo perfil.jpg" alt="Logo perfil" class="w-24 h-24 rounded-full border shadow" />
+          <img
+            id="imagen-perfil"
+            src="/views/imagenes/logo perfil.jpg"
+            alt="Logo perfil"
+            class="w-24 h-24 rounded-full border shadow"
+          />
           <div>
-            <h2 class="text-xl font-semibold">Nombre completo: <span class="font-normal">Deimer Dario Lara Rangel</span></h2>
-            <h2 class="text-xl font-semibold">Número de celular: <span class="font-normal">3001000000</span></h2>
-            <h2 class="text-xl font-semibold">Cédula: <span class="font-normal">1092987263</span></h2>
+            <h2 class="text-xl font-semibold">
+              Nombre completo:
+              <span id="nombre-usuario" class="font-normal">Cargando...</span>
+            </h2>
+            <h2 class="text-xl font-semibold">
+              Número de celular:
+              <span id="telefono-usuario" class="font-normal">---</span>
+            </h2>
+            <h2 class="text-xl font-semibold">
+              Cédula:
+              <span id="cedula-usuario" class="font-normal">---</span>
+            </h2>
           </div>
         </div>
       </section>
 
       <!-- Tabla de notas -->
-      <section class="overflow-x-auto mb-8 bg-white shadow-md rounded-xl p-0"">
-        <table class="min-w-full bg-white shadow-md rounded border">
+      <section class="overflow-x-auto mb-8 bg-white shadow-md rounded-xl p-0">
+        <table
+          id="tabla-notas"
+          class="min-w-full bg-white shadow-md rounded border"
+        >
           <thead class="bg-blue-600 text-white text-sm uppercase">
             <tr>
               <th class="px-4 py-3 text-left">Lógica de programación</th>
-              <th class="px-4 py-3 text-left">Introducción a la programación</th>
+              <th class="px-4 py-3 text-left">
+                Introducción a la programación
+              </th>
               <th class="px-4 py-3 text-left">Metodologías ágiles</th>
               <th class="px-4 py-3 text-left">Emprendimiento</th>
               <th class="px-4 py-3 text-left">Promedio Final</th>
             </tr>
           </thead>
-          <tbody class="text-gray-700 text-sm divide-y divide-gray-200">
-            <tr>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-              <td class="px-4 py-2">0</td>
-            </tr>
-          </tbody>
+          <tbody
+            id="tabla-notas-body"
+            class="text-gray-700 text-sm divide-y divide-gray-200"
+          ></tbody>
         </table>
       </section>
 
       <!-- Botón cerrar sesión -->
       <div class="text-center mb-8">
-        <a href="logout.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded shadow transition">
+        <button
+          id="btn-cerrar-sesion"
+          class="inline-block bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-6 rounded shadow transition"
+        >
           Cerrar sesión
-        </a>
+        </button>
       </div>
     </main>
 
@@ -77,7 +80,7 @@
     <footer class="bg-blue-700 text-white text-center py-4 mt-auto">
       &copy; 2025 Proyecto CESDE - Sistema de Notas
     </footer>
-<script src="script/studentNotes.js"></script>
+
+    <script type="module" src="../app-js/studentNotes.js" defer></script>
   </body>
 </html>
-

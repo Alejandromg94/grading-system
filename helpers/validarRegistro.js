@@ -1,7 +1,6 @@
 import { expresiones } from "../helpers/expresiones.js";
 
 export function validarFormulario() {
-  // ✅ Selecciona todos los inputs por clase
   let inputs = document.getElementsByClassName("formulario__entrada");
   let arregloInputs = [...inputs];
 
